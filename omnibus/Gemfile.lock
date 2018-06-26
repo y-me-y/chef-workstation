@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/chef/omnibus-software.git
-  revision: 54478c0b5ac4a2872c06025dfa6d9a10ed6db72d
+  revision: fc8ce3070ea39d821a99136cb6abe65be5c97d0f
+  branch: jsinha/update_rust
   specs:
     omnibus-software (4.0.0)
       chef-sugar (>= 3.4.0)
@@ -29,15 +30,15 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     awesome_print (1.8.0)
-    aws-sdk (2.11.63)
-      aws-sdk-resources (= 2.11.63)
-    aws-sdk-core (2.11.63)
+    aws-sdk (2.11.75)
+      aws-sdk-resources (= 2.11.75)
+    aws-sdk-core (2.11.75)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.11.63)
-      aws-sdk-core (= 2.11.63)
+    aws-sdk-resources (2.11.75)
+      aws-sdk-core (= 2.11.75)
     aws-sigv4 (1.0.2)
-    berkshelf (7.0.3)
+    berkshelf (7.0.4)
       chef (>= 13.6.52)
       chef-config
       cleanroom (~> 1.0)
@@ -136,11 +137,11 @@ GEM
       multi_json (~> 1.10)
     method_source (0.9.0)
     minitar (0.6.1)
-    mixlib-archive (0.4.7)
+    mixlib-archive (0.4.8)
       mixlib-log
-    mixlib-authentication (2.1.0)
+    mixlib-authentication (2.1.1)
     mixlib-cli (1.7.0)
-    mixlib-config (2.2.6)
+    mixlib-config (2.2.8)
       tomlrb
     mixlib-install (3.10.0)
       mixlib-shellout
@@ -254,7 +255,7 @@ GEM
     thor (0.20.0)
     toml-rb (1.1.1)
       citrus (~> 3.0, > 3.0)
-    tomlrb (1.2.6)
+    tomlrb (1.2.7)
     uuidtools (2.1.5)
     winrm (2.2.3)
       builder (>= 2.1.2)
