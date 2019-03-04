@@ -30,7 +30,7 @@ build do
     shellout!("#{install_dir}/embedded/bin/gem environment").stdout.chomp
 
     # Copy the chef gem's distro stuff over
-    chef_gem_path = File.expand_path("../..", shellout!("#{install_dir}/embedded/bin/gem which chef").stdout.chomp)
+    chef_gem_path = File.expand_path("../..", shellout!("#{install_dir}/embedded/bin/gem which chef", env: with_embedded_path).stdout.chomp)
 
     chef_module_dir = "#{install_dir}/modules/chef"
     create_directory(chef_module_dir)
