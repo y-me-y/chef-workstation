@@ -24,6 +24,11 @@ license :project_license
 
 build do
   block "Install windows powershell scripts" do
+    shellout!("dir #{install_dir}/embedded/lib/ruby/gems/2.5.0/gems/chef-14.10.9-universal-mingw32/lib").stdout.chomp
+    shellout!("#{install_dir}/embedded/bin/gem --version").stdout.chomp
+    shellout!("#{install_dir}/embedded/bin/gem list").stdout.chomp
+    shellout!("#{install_dir}/embedded/bin/gem environment").stdout.chomp
+
     # Copy the chef gem's distro stuff over
     chef_gem_path = File.expand_path("../..", shellout!("#{install_dir}/embedded/bin/gem which chef").stdout.chomp)
 

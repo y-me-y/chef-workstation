@@ -12,7 +12,7 @@ override "chef-workstation-app", version: "v0.1.7"
 # This comes from DK's ./omnibus_overrides.rb
 # If this stays, may need to duplicate that file and the rake
 # tasks for updating dependencies
-override :rubygems, version: "2.7.6"
+override :rubygems, version: "2.7.7"
 override :bundler, version: "1.16.1"
 override "libffi", version: "3.2.1"
 override "libiconv", version: "1.15"
