@@ -6,9 +6,6 @@ driver:
   customize:
     cpus: 2
     memory: 2048
-    storagectl:
-      - name: SATA Controller
-        hostiocache: "on"
 
 provisioner:
   name: chef_zero
@@ -24,6 +21,9 @@ platforms:
   - name: debian-7
   - name: ubuntu-16.04
   - name: ubuntu-14.04
+  - name: windows-2012r2
+    driver:
+      box: tas50/windows_2012r2
 
 suites:
   - name: default

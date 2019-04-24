@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/chef/omnibus-software.git
-  revision: 3d4327c0032b8cc7d25eb33290a7aec2fce20a2a
+  revision: dc63ae59242ebb65ef7c2abc43bd907722a6b8b4
   specs:
     omnibus-software (4.0.0)
       chef-sugar (>= 3.4.0)
