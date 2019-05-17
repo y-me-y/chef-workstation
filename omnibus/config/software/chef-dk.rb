@@ -69,8 +69,6 @@ build do
   command("rm #{project_dir}/lib/chef-dk/cli.rb.bak")
 
   excluded_groups = %w{server docgen maintenance pry travis integration ci}
-  excluded_groups << "ruby_prof" if aix?
-  excluded_groups << "ruby_shadow" if aix?
 
   # install the whole bundle first
   bundle "install --without #{excluded_groups.join(' ')}", env: env
@@ -81,12 +79,12 @@ build do
 
   env["NOKOGIRI_USE_SYSTEM_LIBRARIES"] = "true"
 
-  appbundle "chef", lockdir: project_dir, gem: "chef", without: %w{integration docgen maintenance ci travis}, env: env
+  appbundle "chef", lockdir: project_dir, gem: "chef", without: %w{docgen chefstyle}, env: env
   appbundle "foodcritic", lockdir: project_dir, gem: "foodcritic", without: %w{development}, env: env
-  appbundle "test-kitchen", lockdir: project_dir, gem: "test-kitchen", without: %w{changelog debug docs provisioning}, env: env
+  appbundle "test-kitchen", lockdir: project_dir, gem: "test-kitchen", without: %w{changelog debug docs}, env: env
   appbundle "inspec", lockdir: project_dir, gem: "inspec", without: %w{deploy tools maintenance integration}, env: env
 
-  %w{chef-dk chef-apply chef-vault ohai opscode-pushy-client cookstyle dco berkshelf}.each do |gem|
+  %w{chef-bin chef-dk chef-apply chef-vault ohai opscode-pushy-client cookstyle dco berkshelf}.each do |gem|
     appbundle gem, lockdir: project_dir, gem: gem, without: %w{changelog}, env: env
   end
 
