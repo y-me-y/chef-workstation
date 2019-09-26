@@ -1,3 +1,21 @@
+GIT
+  remote: https://github.com/chef/chef-cli.git
+  revision: fa4a1454ee8791097413b2f5fc4e7c6049aae839
+  branch: afiune/spike/rename-binary
+  specs:
+    chef-cli (1.0.16)
+      addressable (>= 2.3.5, < 2.6)
+      chef (>= 14.0)
+      cookbook-omnifetch (~> 0.5)
+      diff-lcs (~> 1.0)
+      ffi-yajl (>= 1.0, < 3.0)
+      license-acceptance (~> 1.0, >= 1.0.11)
+      minitar (~> 0.6)
+      mixlib-cli (>= 1.7, < 3.0)
+      mixlib-shellout (>= 2.0, < 4.0)
+      paint (~> 1.0)
+      solve (> 2.0, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -17,7 +35,7 @@ GEM
     artifactory (3.0.5)
     ast (2.4.0)
     aws-eventstream (1.0.3)
-    aws-partitions (1.218.0)
+    aws-partitions (1.219.0)
     aws-sdk-apigateway (1.35.0)
       aws-sdk-core (~> 3, >= 3.61.1)
       aws-sigv4 (~> 1.1)
@@ -57,7 +75,7 @@ GEM
     aws-sdk-codedeploy (1.26.0)
       aws-sdk-core (~> 3, >= 3.61.1)
       aws-sigv4 (~> 1.1)
-    aws-sdk-codepipeline (1.24.0)
+    aws-sdk-codepipeline (1.25.0)
       aws-sdk-core (~> 3, >= 3.61.1)
       aws-sigv4 (~> 1.1)
     aws-sdk-configservice (1.37.0)
@@ -156,7 +174,7 @@ GEM
     aws-sdk-sqs (1.22.0)
       aws-sdk-core (~> 3, >= 3.61.1)
       aws-sigv4 (~> 1.1)
-    aws-sdk-ssm (1.55.0)
+    aws-sdk-ssm (1.56.0)
       aws-sdk-core (~> 3, >= 3.61.1)
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.0)
@@ -289,18 +307,6 @@ GEM
       tty-spinner
     chef-bin (15.3.14)
       chef (= 15.3.14)
-    chef-cli (1.0.16)
-      addressable (>= 2.3.5, < 2.6)
-      chef (>= 14.0)
-      cookbook-omnifetch (~> 0.5)
-      diff-lcs (~> 1.0)
-      ffi-yajl (>= 1.0, < 3.0)
-      license-acceptance (~> 1.0, >= 1.0.11)
-      minitar (~> 0.6)
-      mixlib-cli (>= 1.7, < 3.0)
-      mixlib-shellout (>= 2.0, < 4.0)
-      paint (~> 1.0)
-      solve (> 2.0, < 5.0)
     chef-config (15.3.14)
       addressable
       fuzzyurl
@@ -757,7 +763,7 @@ GEM
     ruby-shadow (2.5.0)
     ruby_dep (1.5.0)
     rubyntlm (0.6.2)
-    rubyzip (1.2.4)
+    rubyzip (1.3.0)
     rufus-lru (1.1.0)
     savon (2.12.0)
       akami (~> 1.2)
@@ -1013,7 +1019,7 @@ DEPENDENCIES
   chef (= 15.3.14)
   chef-apply (>= 0.3.3)
   chef-bin (= 15.3.14)
-  chef-cli (>= 1.0.9)
+  chef-cli!
   chef-stove
   chef-sugar-ng
   chef-vault (>= 3.4.1)
